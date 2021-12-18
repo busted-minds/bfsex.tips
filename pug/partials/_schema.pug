@@ -1,0 +1,21 @@
+if !testing
+  script(type="application/ld+json").
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "#{siteTitle}",
+      "url": "#{siteURL}",
+      "sameAs": "#{fPlusURL}",
+      "image": "#{siteURL}/img/og-square.jpg",
+      "description": "#{description}",
+      "inLanguage": "English",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Lemon",
+          "url": "https://busted-minds.github.io",
+          "sameAs": [
+            "https://thefpl.us/meet/lemon",
+            "https://twitter.com/AhoyLemon"
+          ]      
+    }

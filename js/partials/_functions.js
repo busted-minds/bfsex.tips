@@ -9,6 +9,10 @@ function randomFrom(array) {
 }
 
 function sendEvent(c, a, l, v) {
+  if (typeof ga !== 'function') {
+    return;
+  }
+
   if (v) {
     ga('send', 'event', { eventCategory: c, eventAction: a, eventLabel: l, eventValue:v });
     //console.log('CATEGORY: '+c+', ACTION:'+a+', LABEL:'+l+', VALUE:'+v);

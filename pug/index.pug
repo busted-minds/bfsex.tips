@@ -4,7 +4,8 @@
 - var fPlusURL = "https://thefpl.us/also-made/great-sex-tips"
 - var description = "🍆+🍑=🌟"
 - var d = new Date()
-- var lastUpdated = d.getFullYear() + '-' + (d.getMonth()<10?'0':'') + d.getMonth() + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
+- var month = d.getMonth() + 1
+- var lastUpdated = d.getFullYear() + '-' + (month<10?'0':'') + month + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
 doctype html
 html(lang="en")
   head
@@ -22,17 +23,17 @@ html(lang="en")
           .tip
             h3.tip-headline
               span BF Sex Tips {{tipNumberFormatted}}
-            .tip-text(v-html="currentTip")
+            .tip-text(v-html="currentTip" aria-live="polite")
             .share-wrapper
-              button(v-on:click="shareThisTip")
+              button(v-on:click="shareThisTip" type="button" aria-label="Create a share image for this tip")
                 span.icon 
                   svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32")
                     path(d="M6.9 10.3c-3.1 0-5.6 2.5-5.6 5.6 0 3.1 2.5 5.6 5.6 5.6 1.4 0 2.7-.5 3.7-1.4l7.6 4.2c-.5 3.1 1.5 6 4.6 6.5 3.1.5 6-1.5 6.5-4.6.5-3.1-1.5-6-4.6-6.5-1.7-.3-3.4.2-4.7 1.3l-7.6-4.2c.1-.6.1-1.3 0-1.9l7.6-4.2c2.3 2.1 5.9 1.8 7.9-.5s1.8-5.9-.5-7.9c-2.3-2.1-5.9-1.8-7.9.5-.9 1-1.4 2.4-1.4 3.7 0 .3 0 .6.1.9l-7.6 4.2c-1-.8-2.4-1.3-3.7-1.3z")
                 span.text Share this tip!
           .button-holder
-            button(v-on:click="newTip") New Tip
+            button(v-on:click="newTip" type="button") New Tip
       
-      img.bug(src="svg/logo-red.svg" alt="Great Sex Tips logo")
+      img.bug(src="svg/logo-red.svg" alt="BF Sex Tips logo")
       
       include partials/_share.pug
       include partials/_banner.pug

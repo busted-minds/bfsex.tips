@@ -1,8 +1,8 @@
-![greatsex.tips](https://busted-minds.github.io/bfsex.tips/svg/logo-wide.svg)
+![BF Sex Tips](https://busted-minds.github.io/bfsex.tips/svg/logo-wide.svg)
 # He'll *love* what you do to him.
 
 ### So what's this?
-This is a site that generates new and exiting sex tips just for *you!*
+This is a site that generates new and exciting sex tips just for *you!*
 
 ### Who made this?
 [Busted Minds](https://busted-minds.github.io) made this.

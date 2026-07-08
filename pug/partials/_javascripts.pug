@@ -8,7 +8,7 @@
   script(src="js/libraries/canvas2image.js")
 
   script(type="text/javascript").
-    const siteURL = #{siteURL}
+    const siteURL = !{JSON.stringify(siteURL)}
 
 
   // Google Analytics
@@ -29,7 +29,7 @@
     if ('serviceWorker' in navigator) {
       // Register a service worker hosted at the root of the
       // site using the default scope.
-      navigator.serviceWorker.register('#{siteURL}/service-worker.js').then(function(registration) {
+      navigator.serviceWorker.register('service-worker.js').then(function(registration) {
         console.log('Service worker registration succeeded:', registration);
 
       }, function(error) {
@@ -43,6 +43,6 @@
   script(type="text/javascript").
     window._trackJs = {
       token: "9947e081831c42b8aeb3a5fb81a152c4",
-      application: "greatsextips"
+      application: "bfsextips"
     }
   script(type="text/javascript" src="https://cdn.trackjs.com/releases/current/tracker.js")

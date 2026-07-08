@@ -3,7 +3,7 @@ $z-imageBuilderText: 3;
 ////////////
 // Image Builder
 .image-builder { position: absolute; top:0; left: 0; z-index:$z-image-builder;
-  //&.hidden { display: none; }
+  &.hidden { opacity: 0; pointer-events: none; }
   figure { background-size:cover; position: relative; background-position: center; position: relative; width:900px; }
   .coversheet { @include position(absolute,0,0,0,0); background-color:#622927; opacity: 0.83; }
   h3 { @include position(absolute,20px,null,null,0);
@@ -35,7 +35,7 @@ $z-imageBuilderText: 3;
   .share-screen { @include flex-center(); height: 100%; }
   .share-caption { font-family: $serif; color:$white; font-size:1.25em; text-align: center; margin-top: 1em; }
   &.visible { display: block; }
-  .close-share { @include position(fixed,5px,17px); display: block;
+  .close-share { @include position(fixed,5px,17px); display: block; background:transparent; border:0; padding:0; cursor:pointer;
     svg { width:50px; height:50px;
       * { fill:$yellow; }
     }
@@ -46,8 +46,8 @@ $z-imageBuilderText: 3;
     }
   }
   .button-holder { padding-top: 1em; text-align: center; }
-  button { color:$yellow; background:transparent; border:1px solid $yellow; display: inline-block; padding: 0.35em 1.35em; cursor: pointer;
-    &.download { font-family: $serif; font-weight: 600; font-size:1.5em; padding: 0.25 1em; }
+  button { color:$yellow; background:transparent; border:1px solid $yellow; display: inline-block; padding: 0.35em 1.35em; cursor: pointer; border-radius: 4px;
+    &.download { font-family: $serif; font-weight: 600; font-size:1.5em; padding: 0.25em 1em; }
     &.swap { width:14em; }
     &:hover { background: $yellow; color:$black; }
     &[disabled] { color:rgba($white,0.5); background:transparent; border-color:currentColor; }

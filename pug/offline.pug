@@ -1,10 +1,11 @@
 - var testing = false
 - var siteTitle = "BF Sex Tips!"
-- var siteURL = "https://greatsex.tips"
-- var fPlusURL = ""
+- var siteURL = "https://busted-minds.github.io/bfsex.tips"
+- var fPlusURL = "https://thefpl.us/also-made/great-sex-tips"
 - var description = "🍆+🍑=🌟"
 - var d = new Date()
-- var lastUpdated = d.getFullYear() + '-' + (d.getMonth()<10?'0':'') + d.getMonth() + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
+- var month = d.getMonth() + 1
+- var lastUpdated = d.getFullYear() + '-' + (month<10?'0':'') + month + '-' + (d.getDate()<10?'0':'') + d.getDate() + '@' + (d.getHours()<10?'0':'') + d.getHours() + ':' + (d.getMinutes()<10?'0':'') + d.getMinutes() + ':' + (d.getSeconds()<10?'0':'') + d.getSeconds()
 doctype html
 html(lang="en")
   head
@@ -28,7 +29,7 @@ html(lang="en")
               br
               | Figure out what's wrong with your connection and refresh.
       
-      img.bug(src="svg/logo-red.svg")
+      img.bug(src="svg/logo-red.svg" alt="BF Sex Tips logo")
       
       include partials/_share.pug
       

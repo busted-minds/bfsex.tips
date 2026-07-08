@@ -1,7 +1,7 @@
 if !testing
   script(type="application/ld+json").
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "#{siteTitle}",
       "url": "#{siteURL}",
@@ -9,13 +9,9 @@ if !testing
       "image": "#{siteURL}/img/og-square.jpg",
       "description": "#{description}",
       "inLanguage": "English",
-      "author": [
-        {
-          "@type": "Person",
-          "name": "Lemon",
-          "url": "https://busted-minds.github.io",
-          "sameAs": [
-            "https://thefpl.us/meet/lemon",
-            "https://twitter.com/AhoyLemon"
-          ]      
+      "publisher": {
+        "@type": "Organization",
+        "name": "Busted Minds",
+        "url": "https://busted-minds.github.io"
+      }
     }
